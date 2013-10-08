@@ -33,12 +33,12 @@
      <li class="{% block contact_us %}{% endblock %}"><a href="/contact_us">Contact Us</a></li>
     </ul>
     <script>
-     document.write('<a class="navbar-text pull-right" href="'+ document.URL.split('?')[0] + '?l=es">ES</a>');
+     document.write('<a class="navbar-text pull-right" href="'+ document.URL.split('?')[0] + '?l=es">Español</a>');
     </script>
    </div>
   </nav>
-  <div id="content">{% block content %}{% endblock %}</div>
-  <div id="footer">{% block footer %}{% endblock %}</div>
+  <div class="container">{% block content %}{% endblock %}</div>
+  <div class="container">{% block footer %}{% endblock %}</div>
   <script src="{{ cf_url }}{{ jquery }}"></script>
   <script src="{{ cf_url }}{{ bootstrap }}"></script>
  </body>

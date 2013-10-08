@@ -30,15 +30,15 @@
        <li><a href="/book/A%20Reason%20For%20Rainbows?l=es">El Recuerdo Del Arco Iris</a></li>
       </ul>
      </li>
-     <li class="{% block contact_us %}{% endblock %}"><a href="/contact_us?l=es">Contáctenos</a></li>
+     <li class="{% block contact_us %}{% endblock %}"><a href="/contact_us?l=es">Contacto</a></li>
     </ul>
     <script>
-     document.write('<a class="navbar-text pull-right" href="'+ document.URL.split('?')[0] + '">EN</a>');
+     document.write('<a class="navbar-text pull-right" href="'+ document.URL.split('?')[0] + '">English</a>');
     </script>
    </div>
   </nav>
-  <div id="content">{% block content %}{% endblock %}</div>
-  <div id="footer">{% block footer %}{% endblock %}</div>
+  <div class="container">{% block content %}{% endblock %}</div>
+  <div class="container">{% block footer %}{% endblock %}</div>
   <script src="{{ cf_url }}{{ jquery }}"></script>
   <script src="{{ cf_url }}{{ bootstrap }}"></script>
  </body>
