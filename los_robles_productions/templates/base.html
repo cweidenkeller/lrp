@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  {% block head %}
+  <title>{% block title %}{% endblock %} - Los Robles Productions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static', filename='custom.css') }}" rel="stylesheet" media="screen">
+  {% endblock %}
+ </head>
+ <body>
+  <nav class="navbar navbar-default" role="navigation">
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/"><img alt="A Tree" src="http://bd1bd20de0e06484ccd2-a4b933abf0480693b1cbd92bb7f0259c.r92.cf1.rackcdn.com/tree.png" height="30" width="25" class="img-responsive"/></a>
+    <a class="navbar-brand" href="/">Los Robles Productions Inc.</a>
+   </div>
+   <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+     <li class="{% block our_story %}{% endblock %}"><a href="/our_story">Our Story</a></li>
+     <li class="dropdown {% block book %}{% endblock %}">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Work<b class="caret"></b></a>
+       <ul class="dropdown-menu">
+        <li><a href="/book/A%20Reason%20For%20Rainbows">A Reason For Rainbows</a></li>
+       </ul>
+     </li>
+     <li class="{% block contact_us %}{% endblock %}"><a href="/contact_us">Contact Us</a></li>
+    </ul>
+    <script>
+     document.write('<a class="navbar-text pull-right" href="'+ document.URL.split('?')[0] + '?l=es">ES</a>');
+    </script>
+   </div>
+  </nav>
+  <div id="content">{% block content %}{% endblock %}</div>
+  <div id="footer">{% block footer %}{% endblock %}</div>
+  <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+ </body>
+</html>
+
