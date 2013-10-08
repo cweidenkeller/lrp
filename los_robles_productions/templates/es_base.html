@@ -5,8 +5,8 @@
   <title>{% block title %}{% endblock %} - Los Robles Productions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" media="screen">
-  <link href="{{ url_for('static', filename='custom.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ cf_url }}{{ bootstrap_css }}" rel="stylesheet" media="screen">
+  <link href="{{ cf_url }}{{ custom_css }}" rel="stylesheet" media="screen">
   {% endblock %}
  </head>
  <body>
@@ -18,7 +18,7 @@
      <span class="icon-bar"></span>
      <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/?l=es"><img alt="tree" src="http://bd1bd20de0e06484ccd2-a4b933abf0480693b1cbd92bb7f0259c.r92.cf1.rackcdn.com/tree.png" height="30" width="25" class="img-responsive"></a>
+    <a class="navbar-brand" href="/?l=es"><img alt="tree" src="{{ cf_url }}tree.png" height="30" width="25" class="img-responsive"></a>
     <a class="navbar-brand" href="/?l=es">Los Robles Productions Inc.</a>
    </div>
    <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -39,8 +39,8 @@
   </nav>
   <div id="content">{% block content %}{% endblock %}</div>
   <div id="footer">{% block footer %}{% endblock %}</div>
-  <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+  <script src="{{ cf_url }}{{ jquery }}"></script>
+  <script src="{{ cf_url }}{{ bootstrap }}"></script>
  </body>
 </html>
 
