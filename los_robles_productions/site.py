@@ -24,7 +24,7 @@ def home():
     else:
         return _render('es_home.html')
 @app.route('/our_story')
-def about_us():
+def our_story():
     if not request.args.get('l'):
         return _render('our_story.html')
     else:
@@ -41,7 +41,12 @@ def book(name):
         return _render('book.html')
     else:
         return _render('es_book.html')
-
+@app.route('/about_us')
+def about_us():
+    if not request.args.get('l'):
+        return _render('about_us.html')
+    else:
+        return _render('es_about_us.html')
 if __name__ == "__main__":
     ws = WSGIServer(('', 80), app)
     ws.serve_forever()
